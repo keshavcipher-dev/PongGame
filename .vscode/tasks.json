@@ -1,0 +1,50 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Build Pong",
+            "command": "C:/w64devkit/bin/g++.exe",
+            "args": [
+                "main.cpp",
+                "-o",
+                "pong.exe",
+                "-O2",
+                "-Wall",
+                "-I",
+                "include",
+                "-L",
+                "lib",
+                "-lraylib",
+                "-lopengl32",
+                "-lgdi32",
+                "-lwinmm"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Compile Raylib Pong game"
+        },
+        {
+            "type": "shell",
+            "label": "Run Pong",
+            "command": ".\\pong.exe",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "dependsOn": "Build Pong",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "detail": "Build and run the game"
+        }
+    ]
+}

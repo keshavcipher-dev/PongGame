@@ -1,0 +1,21 @@
+# Compiled executables
+*.exe
+*.out
+
+# Object files
+*.o
+*.obj
+
+# VS Code local settings (machine-specific paths)
+.vscode/settings.json
+
+# OS generated files
+Thumbs.db
+.DS_Store
+
+# Temporary files
+*.tmp
+*.log
+
+# Internal learning notes / roadmap
+TASKS.md
